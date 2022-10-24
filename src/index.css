@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font: normal 1.6rem/1.7 Verdana, Tahoma, sans-serif;
+}
+
+header {
+  background-color: #faebd7;
+  min-height: fit-content;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
