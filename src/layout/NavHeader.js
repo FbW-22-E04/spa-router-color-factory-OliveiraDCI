@@ -1,7 +1,8 @@
 function NavHeader() {
   return (
     <header>
-      <h1>Color Generator App</h1>
+      <p className="brush">🖌</p>
+      <h1>Color Factory</h1>
     </header>
   );
 }
