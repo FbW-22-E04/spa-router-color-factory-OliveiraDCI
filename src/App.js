@@ -1,7 +1,11 @@
-import React from "react";
-import { Link, navLink } from "react-router-dom";
+import { useContext } from "react";
+import { Context } from "./utilities/ContextProvider";
+import { Link } from "react-router-dom";
 
 function App() {
+  const { allColors } = useContext(Context);
+  console.log("from App -->", allColors);
+
   return (
     <main>
       <h2 className="pick">
@@ -20,9 +24,19 @@ function App() {
         <span> </span>
         <span>!</span>
       </h2>
-      <div>Color picker</div>
+      <div>
+        {allColors.map((item, idx) => (
+          <div className="color-box" key={idx} color={item.value}>
+            <Link to="/Colors/color" state={{ color: item.value }}>
+              {item.value}
+            </Link>
+          </div>
+        ))}
+      </div>
       <div className="more-colors">
-        <button className="white-mode">CREATE NEW COLOR</button>
+        <Link to="/Colors">
+          <button className="btn-new-color">ADD MORE COLORS</button>
+        </Link>
       </div>
     </main>
   );

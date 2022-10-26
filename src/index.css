@@ -59,6 +59,10 @@ h2 span {
   animation: float 0.2s ease-in-out infinite;
 }
 
+h2:hover span {
+  animation: bounce 0.6s;
+}
+
 @keyframes float {
   0%,
   100% {
@@ -70,10 +74,6 @@ h2 span {
   66% {
     transform: translateY(1px) rotate(2deg);
   }
-}
-
-body:hover span {
-  animation: bounce 0.6s;
 }
 
 @keyframes bounce {
@@ -165,19 +165,46 @@ h2 span:nth-child(14) {
   animation-delay: 0.65s;
 }
 
-.white-mode {
+.btn-new-color {
   width: fit-content;
   margin: 0 auto;
   text-decoration: none;
-  padding: 5px 10px;
-  background-color: #e2c636;
-  border: 1px solid #75bd9f;
+  padding: 0.5rem 1.5rem;
+  margin: 1em;
+  background-color: #e2c53693;
+  border: 3px solid #75bd9f;
   border-radius: 5px;
   color: #fff;
-  transition: 0.35s ease-in-out;
+  transition: 0.15s ease-in-out;
 }
 
-.white-mode:hover {
+.btn-new-color:hover {
   background-color: #75bd9f;
-  color: #333;
+  color: rgb(192, 91, 9);
+  font-weight: bolder;
+  text-shadow: 2px 2px 3px #fff;
+  border: 3px solid #e2c636;
+  cursor: pointer;
+  scale: 1.06;
+  box-shadow: 2px 2px 10px #999;
+}
+
+.btn-new-color:active {
+  scale: 1;
+}
+
+.color-glory {
+  margin: 1em auto;
+  padding: 1em;
+  width: 80vw;
+  height: 35vh;
+  border: 2px solid #999;
+  border-radius: 15px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 1px 15px #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
