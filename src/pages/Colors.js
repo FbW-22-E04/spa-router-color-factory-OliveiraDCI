@@ -17,7 +17,7 @@ function Colors() {
       ]);
       navigate("/");
     }
-    return () => {}; // perhaps some side-effects cleanup?
+    return () => {}; // does it need some side-effects cleanup?
   }, [newColor, confirmed]);
 
   const handleClick = () => setConfirmed(true);
@@ -27,12 +27,13 @@ function Colors() {
   };
 
   return (
-    <div className="color-form">
-      <label htmlFor="color-picker">
-        Color selector:
-        <input onInput={handleInput} type="color" name="color" id="color" />
-      </label>
-
+    <div className="flex-wrap-col">
+      <div className="color-form">
+        <label htmlFor="color-picker">
+          Color selector:
+          <input onInput={handleInput} type="color" name="color" id="color" />
+        </label>
+      </div>
       <button
         className="btn-confirm"
         onClick={() =>
@@ -46,26 +47,3 @@ function Colors() {
 }
 
 export default Colors;
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/**
-   { <div>Pick a new awesome color for our list,</div>
-      <div>You'll need to login to use this feature:</div>
-      <div>login: color-lover | password: 123</div> }
- */
-
-/**
-<div>
-  { {allColors.map((item, idx) => (
-    <div key={idx}>{item.color}</div>
-  ))} }
-</div>
-  */

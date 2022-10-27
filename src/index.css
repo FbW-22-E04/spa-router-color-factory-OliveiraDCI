@@ -165,7 +165,9 @@ h2 span:nth-child(14) {
   animation-delay: 0.65s;
 }
 
-.btn-new-color {
+.btn-new-color,
+.btn-confirm,
+.btn-back {
   width: fit-content;
   margin: 0 auto;
   text-decoration: none;
@@ -174,11 +176,14 @@ h2 span:nth-child(14) {
   background-color: #e2c53693;
   border: 3px solid #75bd9f;
   border-radius: 5px;
-  color: #fff;
+  color: #555;
+  font-weight: bold;
   transition: 0.15s ease-in-out;
 }
 
-.btn-new-color:hover {
+.btn-new-color:hover,
+.btn-confirm:hover,
+.btn-back:hover {
   background-color: #75bd9f;
   color: rgb(192, 91, 9);
   font-weight: bolder;
@@ -191,6 +196,20 @@ h2 span:nth-child(14) {
 
 .btn-new-color:active {
   scale: 1;
+}
+
+.delete {
+  cursor: pointer;
+  padding: 0.1em;
+}
+
+.delete:hover {
+  background-color: #e2c636;
+  color: #ff0000;
+  border-radius: 10px;
+  text-shadow: 1px 1px 15px #fff;
+  font-weight: bolder;
+  scale: 1.2;
 }
 
 .color-glory {
@@ -207,4 +226,58 @@ h2 span:nth-child(14) {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+}
+
+.light-bulb {
+  font-size: 3rem;
+}
+
+.color-box {
+  padding: 0.2em 0.8em;
+  margin: 0.2em;
+  border: 2px solid #999;
+  border-radius: 8px;
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #fff;
+  text-shadow: 0 2px 10px #000;
+}
+
+a:hover,
+a:active {
+  scale: 1.2;
+  color: #000;
+  text-shadow: 0 2px 10px #fff;
+  font-weight: bolder;
+}
+
+/* Colors component */
+
+.color-form {
+  width: 250px;
+  height: 100px;
+  margin: 1em auto;
+  border: 2px solid #999;
+  border-radius: 8px;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-wrap-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

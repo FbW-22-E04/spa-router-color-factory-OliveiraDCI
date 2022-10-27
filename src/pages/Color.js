@@ -5,10 +5,15 @@ function Color() {
   const { color } = location.state;
 
   return (
-    <div className="color-glory" style={{ backgroundColor: color }}>
-      <div>Here, the color {color} in all its glory ! </div>
+    <div className="flex-wrap-col">
+      <div className="color-glory" style={{ backgroundColor: color }}>
+        <div>
+          The color {color} in all its glory{" "}
+          <span className="light-bulb">💡</span>{" "}
+        </div>
+      </div>
       <Link to="/">
-        <button>BACK</button>
+        <button className="btn-back">BACK</button>
       </Link>
     </div>
   );

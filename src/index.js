@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavHeader from "./layout/NavHeader";
 import Colors from "./pages/Colors";
 import Color from "./pages/Color";
+import NotFound from "./pages/NotFound";
 import ContextProvider from "./utilities/ContextProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -17,6 +18,7 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/Colors" element={<Colors />} />
         <Route path="/Colors/Color" element={<Color />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   </ContextProvider>

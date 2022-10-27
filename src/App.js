@@ -3,8 +3,11 @@ import { Context } from "./utilities/ContextProvider";
 import { Link } from "react-router-dom";
 
 function App() {
-  const { allColors } = useContext(Context);
-  console.log("from App -->", allColors);
+  const { allColors, setAllColors } = useContext(Context);
+
+  const handleClick = (color) => {
+    setAllColors((prevState) => prevState.filter((el) => el.value !== color));
+  };
 
   return (
     <main>
@@ -26,10 +29,18 @@ function App() {
       </h2>
       <div>
         {allColors.map((item, idx) => (
-          <div className="color-box" key={idx} color={item.value}>
+          <div
+            className="color-box"
+            style={{ backgroundColor: item.value }}
+            key={idx}
+            color={item.value}
+          >
             <Link to="/Colors/color" state={{ color: item.value }}>
               {item.value}
             </Link>
+            <div className="delete" onClick={() => handleClick(item.value)}>
+              <div>X</div>
+            </div>
           </div>
         ))}
       </div>
